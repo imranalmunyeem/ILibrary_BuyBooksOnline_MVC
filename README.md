@@ -23,9 +23,12 @@
 
 ## Steps of Building this project from scratch:
 
-### Step 1: Create A new MVC project
-    --- File -> New -> Project -> MVC -> Create
+### Step 1: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
+    --- Model ->Add ->Class ->Category.cs
+##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
 
+### Step 2: Create A new MVC project
+    --- File -> New -> Project -> MVC -> Create
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
