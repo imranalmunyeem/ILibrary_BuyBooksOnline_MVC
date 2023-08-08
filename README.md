@@ -3,6 +3,7 @@
 ## Tools used in this project
     --- C#, .net 8.0
     --- Visual Studio Preview 
+    --- SQL Server Management Studio (SSMS) 
 
 ## Features of this project 
     --- N-Tier Architecture
