@@ -20,3 +20,11 @@
     --- View Components in .NET Core
     --- Seed Database with DbInitializer
     --- Deploy to Azure
+
+## Steps of Building this project from scratch:
+
+### Step 1: Create A new MVC project
+    --- File -> New -> Project -> MVC -> Create
+
+
+
