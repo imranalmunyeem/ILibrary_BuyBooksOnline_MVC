@@ -1,7 +1,7 @@
 # ILibrary_BuyBooksOnline
 
 ## Tools used in this project
-    --- C#, .net 8
+    --- C#, .net 8.0
     --- Visual Studio Preview 
 
 ## Features of this project 
@@ -26,5 +26,8 @@
 ### Step 1: Create A new MVC project
     --- File -> New -> Project -> MVC -> Create
 
-
+### Questions related to this project
+##### What is nullable in C# .net8.0?
+    --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
+    --- This feature enables the compiler to perform more thorough analysis of your code's nullability and provide warnings when potential null references are detected.
 
