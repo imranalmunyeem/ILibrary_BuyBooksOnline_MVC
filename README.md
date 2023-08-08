@@ -38,3 +38,19 @@
 ##### What appsettings.json contains in c# MVC?
     --- appsettings.json file is commonly used to store configuration settings that are used by the application. 
     --- These settings can include various parameters, connection strings, API keys, and other configuration values that affect the behavior of the application.
+
+##### What program.cs contains in MVC?
+    --- Program.cs file contains the entry point of your application. 
+    --- It's the starting point where the application is configured and executed. 
+    --- The contents of Program.cs can vary depending on the version of .NET you're using and the specific configuration of your application.
+    --- CreateHostBuilder method sets up the configuration and initializes the web host.
+    --- UseStartup<Startup>() specifies the Startup class that configures the services and middleware for the application.
+    --- app.Environment.IsDevelopment() checks whether the application is running in development mode.
+    --- app.UseExceptionHandler("/Home/Error"); adds exception handling middleware to catch and handle exceptions that occur during request processing. If the application is not in development mode, it redirects to the "Error" action of the "Home" controller.
+    --- app.UseHsts(); adds HTTP Strict Transport Security (HSTS) middleware to enforce secure connections.
+    --- app.UseHttpsRedirection(); adds middleware to redirect HTTP requests to HTTPS.
+    --- app.UseStaticFiles(); adds middleware to serve static files (like CSS, JavaScript, images) directly to clients.
+    --- app.UseRouting(); adds routing middleware to determine which controller and action should handle the incoming request.
+    --- app.UseAuthorization(); adds middleware for authorization, allowing you to restrict access to certain parts of the application based on user roles or policies.
+    --- app.MapControllerRoute(...); configures a default controller route. It maps URL patterns to controller actions. In this case, the default route maps to the "Index" action of the "Home" controller.
+    --- app.Run(); This line starts the application and listens for incoming HTTP requests. The application will continue running until it's explicitly stopped.
