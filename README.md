@@ -55,6 +55,6 @@
     --- app.MapControllerRoute(...); configures a default controller route. It maps URL patterns to controller actions. In this case, the default route maps to the "Index" action of the "Home" controller.
     --- app.Run(); This line starts the application and listens for incoming HTTP requests. The application will continue running until it's explicitly stopped.
 
-##### What is the routing pattern in MVC?
+##### What is the default routing pattern in MVC?
     ---- host/{controller}/{action}/{id}
     --- Example: 12.01.53/category/index/3
