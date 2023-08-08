@@ -39,6 +39,8 @@
     --- appsettings.json file is commonly used to store configuration settings that are used by the application. 
     --- These settings can include various parameters, connection strings, API keys, and other configuration values that affect the behavior of the application.
 
+##### Things to keep in mind:
+    --- Model is not always needed.
 ##### What program.cs contains in MVC?
     --- Program.cs file contains the entry point of your application. 
     --- It's the starting point where the application is configured and executed. 
