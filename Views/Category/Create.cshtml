@@ -1,0 +1,45 @@
+﻿@model Category
+
+<div class="container mt-4">
+    <div class="card shadow border-0">
+        <div class="card-header bg-secondary bg-gradient text-white py-3">
+            <h2 class="text-center m-0">Create Category</h2>
+        </div>
+        <div class="card-body p-4">
+            <form method="post" class="row">
+                <div class="border p-3 col-md-6 offset-md-3">
+                    <!-- Replace with your server-side validation summary if needed -->
+                    <!-- <div asp-validation-summary="ModelOnly"></div> -->
+                    <div class="form-floating mb-3">
+                        <input asp-for="Name" class="form-control" />
+                        <label asp-for="Name">Name</label>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="DisplayOrder" class="form-control" />
+                        <label asp-for="DisplayOrder">Display Order</label>
+                        <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-2">
+                            <button type="submit" class="btn btn-primary w-100">Create</button>
+                        </div>
+                        <div class="col-md-6">
+                            <a asp-controller="Category" asp-action="Index" class="btn btn-outline-primary w-100">
+                                Back to List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"/>
+    }
+}
