@@ -34,7 +34,7 @@
 
 ### Step 2: Create A new MVC project
     --- File -> New -> Project -> MVC -> Create
-
+# ----------------------------------------------------------Build Category Page---------------------------------------------------------------------->
 ### Step 3: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
     --- Model ->Add ->Class ->Category.cs
 ##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
