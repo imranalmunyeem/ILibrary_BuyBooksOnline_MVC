@@ -1,11 +1,14 @@
 # ILibrary_BuyBooksOnline
 
-## Tools used in this project
+## Tools, Patterns and frameworks used in this project
     --- C#, .net 8.0
+    --- MVC Pattern
+    --- Entity Framework for Database
+    --- html, CSS, BootStrap (qartz)
     --- Visual Studio Preview 
     --- Microsoft SQL Server Management Studio (SSMS) 
 
-## Features of this project 
+## Things used on this project 
     --- N-Tier Architecture
     --- Repository Pattern and UnitOfWork
     --- TempData/ViewBag/ViewData in .NET core
@@ -26,13 +29,72 @@
 ### Step 1: Download the follwing tools:
     --- Download Microsoft Visual Studio Preview (https://visualstudio.microsoft.com/vs/preview/)
     --- Download Microsoft SQL Server Management Studio (SSMS) (https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+    --- Download SQL Server 2022 (https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+    --- Download bootstrap theme (https://bootswatch.com/) ->Add bootstrap.css file to wwwroot ->lib ->Bootstrap ->css
 
-### Step 2: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
+### Step 2: Create A new MVC project
+    --- File -> New -> Project -> MVC -> Create
+
+### Step 3: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
     --- Model ->Add ->Class ->Category.cs
 ##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
 
-### Step 3: Create A new MVC project
-    --- File -> New -> Project -> MVC -> Create
+### Step 4: Open SQL Server 
+    --- Set up the required fields
+    --- Use "sqlcmd -S IMRAN -E" to connect the server
+
+### Step 5: Open SQL Server Management Studio
+    --- Set up the required fields
+    --- Select the created SQL Server "Imran"
+
+### Step 6: Modify "appsettings.json" file to setup the connection string for database 
+    ---   "ConnectionStrings": {
+            "DefaultConnection": "Server=localhost;Database=master;Trusted_Connection=True;TrustServerCertificate=True;"
+            }
+
+### Step 7: Install the following packages from "Nuget Package manager"
+    --- Microsoft.EntityFrameworkCore.SqlServer 8.00
+    --- Microsoft.EntityFrameworkCore 8.00
+    --- Microsoft.EntityFrameworkCore.Tools 8.00
+
+### Step 8: Setup "ApplicationDBContext"
+    --- Project ->Create A new folder ->Name it "Data" ->Add a class named "ApplicationDbContext.cs" under data folder
+
+### Step 9: Configure "ApplicationDBContext" class
+
+### Step 10: Link "ApplicationDbContext" to builder in "program.cs"
+    --- Go to "Add services to the container." -> Add "builder.Services.AddDbContext<ILibrary_BuyBooksOnline.Data.ApplicationDbContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));"
+
+### Step 11: To work with database follow the below steps
+    --- Tools ->Nuget Package Manager ->Nuget Package manager Console
+    --- In console, write the below commands:
+                --- update-database             //It will display build succeeded if the DB connection is successful
+
+### Step 12: To use "Entity Framework" for Table Creation
+    --- Add "public DbSet<Category> Categories { get; set; }" to "ApplicationDbContext.cs"  //It will automatically create table using entity framework core
+    --- Nuget package manager console ->add-migration AddCategoryTableToDb                  //It will automatically create category table under Migration folder
+    --- Nuget package manager console ->update-database                                     // It will automatically access the table from Migration folder, convert to SQL, and add it to the "Microsoft SQL Server management System"
+
+#### Step 13: Add "Category Controller"
+    --- Controllers ->Add ->Controller ->MVC Controller-Empty ->Name it CategoryController
+
+#### Step 14: Add "View" for the "Category Controller"
+    --- Views -> Add Folder named "Category" -> Add "Index.cshtml" and "category.cshtml" here
+
+#### Step 15: Add "Category" link to header
+    --- Go to "_Layout.cshtml" -> Add "Category" to Navbar
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+            </li> 
+##### [N.B: It will create the category navbar and show it]
+
+#### Step 16: Seed entities to database from "ApplicationDbContext" file using "Override Model Builder"
+    --- Data ->ApplicationDbContext -> Add " protected override void OnModelCreating(ModelBuilder modelBuilder)" ->Add categories depending you need
+    --- Nuget package console ->add-migration SeedCategoryTable ->update-database           //It will update the database with categorylist
+
+#### Step 17: Retrieve and dispplay the newly created categories in the view
+    --- CategoryController -> Add the required modification to the category controller class        //It will retrieve data from database and display on views
+    --- Pass the "objcategorylist" from controller class to "View"
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
