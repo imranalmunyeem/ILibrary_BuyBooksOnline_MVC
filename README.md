@@ -34,7 +34,7 @@
 
 ### Step 2: Create A new MVC project
     --- File -> New -> Project -> MVC -> Create
-
+# ----------------------------------------------------------Build Category Page---------------------------------------------------------------------->
 ### Step 3: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
     --- Model ->Add ->Class ->Category.cs
 ##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
@@ -95,6 +95,40 @@
 #### Step 17: Retrieve and dispplay the newly created categories in the view
     --- CategoryController -> Add the required modification to the category controller class        //It will retrieve data from database and display on views
     --- Pass the "objcategorylist" from controller class to "View"
+
+#### Step 18: Add "Create" page for category
+    --- Add "create" action method in CreateController file
+    --- Add a create page under views of category
+    --- Update the route ofr create page in index.cshtml file
+
+#### Step 19: Add "Input Tags helper" to html pages to make it more dynamic
+    --- For example:  Add <input asp-for="DisplayOrder"
+    --- We don't need to add type as tag helper will automatically fetch it.
+
+#### Step 20: Add "Server Side validation" 
+    --- Use data notations in model file
+    --- Use conditional statement in the action method in controller pages
+
+#### Step 21: Add "Client Side validation" 
+    --- Using "_ValidationScriptsPartial.cshtml" from shared folder, we can add client side validation
+    --- Add below code in html pages to add client side validation
+            @section Scripts{
+                @{
+                    <partial name="_ValidationScriptsPartial"/>
+                        }
+                    }
+
+#### Step 22: Add "asp-route-id="@obj.Id" to dynamically routing for edit the categogry //user can put any page number
+
+#### Step 23: Display notification using TempData
+    --- For example, Go to Create controller and add "TempData["success"] = "Category created successfully";"
+
+#### Step 24: Add "Toastr" notification which is more better and dynamic
+    --- Add toastr from here (https://codeseven.github.io/toastr/)
+    --- Add this (<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>) to _layout.cshtml
+    --- Add this (<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>) to individual notifications
+    --- Also add this ("<script src ="~/lib/jquery/dist/jquery.min.js"></script>") to individual notifications
+
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
