@@ -3,7 +3,7 @@
 ## Tools used in this project
     --- C#, .net 8.0
     --- Visual Studio Preview 
-    --- SQL Server Management Studio (SSMS) 
+    --- Microsoft SQL Server Management Studio (SSMS) 
 
 ## Features of this project 
     --- N-Tier Architecture
@@ -23,12 +23,15 @@
     --- Deploy to Azure
 
 ## Steps of Building this project from scratch:
+### Step 1: Download the follwing tools:
+    --- Download Microsoft Visual Studio Preview (https://visualstudio.microsoft.com/vs/preview/)
+    --- Download Microsoft SQL Server Management Studio (SSMS) (https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 
-### Step 1: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
+### Step 2: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
     --- Model ->Add ->Class ->Category.cs
 ##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
 
-### Step 2: Create A new MVC project
+### Step 3: Create A new MVC project
     --- File -> New -> Project -> MVC -> Create
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
