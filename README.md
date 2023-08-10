@@ -136,8 +136,9 @@
 #### Step 26: Add table and book list in "ApplicationDbContext"
 
 #### Step 27: Open Nuget Package Manager Console and write -
-    --- add-migration addProductsToDb
+    --- Add-Migration ILibraryBooks
     --- update-database
+
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
