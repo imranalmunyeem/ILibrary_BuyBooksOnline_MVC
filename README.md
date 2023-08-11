@@ -34,7 +34,8 @@
 
 ### Step 2: Create A new MVC project
     --- File -> New -> Project -> MVC -> Create
-# ----------------------------------------------------------Build Category Page---------------------------------------------------------------------->
+
+# -----------Build Category Page----------->
 ### Step 3: Create A new Class from the "Model" [N.B: It's not mandatory to create the class in model. But we usually do it in the model]
     --- Model ->Add ->Class ->Category.cs
 ##### [N.B. It's not mandatory to create the class in model. But we usually do it in the model. We have to make these classes before using entity framework]
@@ -128,6 +129,15 @@
     --- Add this (<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>) to _layout.cshtml
     --- Add this (<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>) to individual notifications
     --- Also add this ("<script src ="~/lib/jquery/dist/jquery.min.js"></script>") to individual notifications
+
+# ---------------Build ILibraryBook(Products) Page---------------------->
+#### Step 25: Create A new model class named "Product" and update with required properties
+
+#### Step 26: Add table and book list in "ApplicationDbContext"
+
+#### Step 27: Open Nuget Package Manager Console and write -
+    --- Add-Migration ILibraryBooks
+    --- update-database
 
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
