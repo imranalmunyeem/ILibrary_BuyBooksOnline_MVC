@@ -46,7 +46,8 @@ namespace ILibrary_BuyBooksOnline.Data
                    ListPrice = 150,
                    Price = 120,
                    Price50 = 100,
-                   Price100 = 80
+                   Price100 = 80,
+                   ImageUrl = ""
                },
                 new ILibraryBooks
                 {
@@ -58,7 +59,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 40,
                     Price = 30,
                     Price50 = 25,
-                    Price100 = 20
+                    Price100 = 20,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -69,7 +72,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ISBN = "RITO55555011938895444",
                     Price = 50,
                     Price50 = 40,
-                    Price100 = 35
+                    Price100 = 35,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -81,7 +86,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 70,
                     Price = 65,
                     Price50 = 60,
-                    Price100 = 55
+                    Price100 = 55,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -93,7 +100,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 30,
                     Price = 27,
                     Price50 = 25,
-                    Price100 = 20
+                    Price100 = 20,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -105,7 +114,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 25,
                     Price = 23,
                     Price50 = 22,
-                    Price100 = 20
+                    Price100 = 20,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -117,7 +128,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 150,
                     Price = 120,
                     Price50 = 100,
-                    Price100 = 80
+                    Price100 = 80,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -129,7 +142,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 40,
                     Price = 30,
                     Price50 = 25,
-                    Price100 = 20
+                    Price100 = 20,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -140,7 +155,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ISBN = "RITO55555011938895444e",
                     Price = 50,
                     Price50 = 40,
-                    Price100 = 35
+                    Price100 = 35,
+                    ImageUrl = ""
+
                 },
                 new ILibraryBooks
                 {
@@ -152,7 +169,9 @@ namespace ILibrary_BuyBooksOnline.Data
                     ListPrice = 70,
                     Price = 65,
                     Price50 = 60,
-                    Price100 = 55
+                    Price100 = 55,
+                    ImageUrl = ""
+
                 }
                 );
 
