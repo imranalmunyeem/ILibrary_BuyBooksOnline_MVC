@@ -139,6 +139,14 @@
     --- Add-Migration ILibraryBooks
     --- update-database
 
+#### Step 28: Add the Controller and views like we did for "Category" before
+
+#### Step 29: Use foreign key in EF core to make the relation between product and category
+
+#### Step 30: Update the ILibraryBooks model class and ApplicationDbContext File with category name and category ID
+
+#### Step 29: In the same way add the image url to database
+
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
