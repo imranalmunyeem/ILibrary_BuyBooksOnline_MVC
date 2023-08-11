@@ -150,7 +150,7 @@
 # ---------------Build Login/Registration Page---------------------->
 #### Step 30: Add Scafolding Identity to build authrorization and authontication features
 
-#### Step 31: Update all the nuget packages to avoid the issue regarding scafolded item
+#### Step 31: Make sure all the nuget packages versions are same to avoid the issue regarding scafolded item
 
 #### Step 32: Go to ApplicationDbContext file and change the DbContext to -> IdentityDbContext
 
