@@ -150,7 +150,12 @@
 # ---------------Build Login/Registration Page---------------------->
 #### Step 30: Add Scafolding Identity to build authrorization and authontication features
 
-#### Step 31: ILibrary_BuyBooksOnline ->Add ->New Scafolded Item ->Identity ->Add
+#### Step 31: Make sure all the nuget packages versions are same to avoid the issue regarding scafolded item
+
+#### Step 32: Go to ApplicationDbContext file and change the DbContext to -> IdentityDbContext
+
+#### Step 33: ILibrary_BuyBooksOnline ->Add ->New Scafolded Item ->Identity ->Add
+
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
