@@ -35,14 +35,18 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+
+
                     <!-- search box with padding -->
                     <form class="d-flex pe-3" asp-controller="Search" asp-action="Index" method="get">
                         <input class="form-control me-2" type="search" name="q" placeholder="Search Book" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button> </form>
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </nav>
     </header>
+    <partial name="_LoginPartial" />
     <div class="container">
         <main role="main" class="pb-3">
             <partial name="_Notification" />

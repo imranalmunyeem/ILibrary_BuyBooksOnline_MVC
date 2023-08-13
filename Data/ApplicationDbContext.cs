@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace ILibrary_BuyBooksOnline.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
 
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
