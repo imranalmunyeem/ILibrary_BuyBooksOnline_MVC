@@ -156,6 +156,42 @@
 
 #### Step 33: ILibrary_BuyBooksOnline ->Add ->New Scafolded Item ->Identity ->Add
 
+#### Step 34: After adding scafoded item, add the Login_Partial to _Layout.cshtml file
+
+#### Step 35: Go to program.cs and add below lines -
+                builder.Services.AddRazorPages();
+                app.MapRazorPages(); //It will add routing to map the razor pages
+
+#### Step 36: Open package manager console and write below command -
+                add-migration addIdentityTable
+                update-database
+##### Note: USers Tables will be created
+
+#### Step 37: Add additional data for users according to our requirements. To do that -
+                --- Model ->add ->class -> name it "ApplicationUser"
+                --- Update the required changes in Application user class (add "Microsoft.AspNetCore.Identity")
+                --- Extend to the identity user
+
+#### Step 38: Go to ->Data ->ApplicationDbContext.cs -> Add the following line 
+                --- public DbSet<ApplicationUser>ApplicationUsers { get; set; }
+
+#### Step 39: Open package manager console and write below command -
+                --- add-migration ExtendidentityUser
+                --- update-database
+
+#### Step 40: Open the Register.cshtml.cs file and replace the identity user with application user
+
+#### Step 41: Add new role 
+                --- Open program.cs
+######              Add below line instead of default identity
+                --- builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext();
+######              Open Register.cshtml.cs and add below helper class for role manager
+                --- private readonly RoleManager<IdentityRole> _roleManager;
+######              Inject Below lines using dependency injection in Public Register Moodel class
+                --- RoleManager<IdentityRole> roleManager
+                --- roleManager = roleManager;
+
+
 ### Questions related to this project
 ##### What is nullable in C# .net8.0?
     --- Nullable reference types allow you to express whether a particular reference type (like a class or string) is allowed to be null or not, helping to reduce null reference exceptions and improve code quality. 
