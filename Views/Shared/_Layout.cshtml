@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="~/ILibrary_BuyBooksOnline.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar bg border-bottom box-shadow mb-3">
             <div class="container-fluid">
 
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ILibrary_BuyBooksOnline</a>
@@ -37,16 +38,13 @@
                     </ul>
 
 
-                    <!-- search box with padding -->
-                    <form class="d-flex pe-3" asp-controller="Search" asp-action="Index" method="get">
-                        <input class="form-control me-2" type="search" name="q" placeholder="Search Book" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
+                    <!-- Add a new container for login and register -->
+                    <div class="d-flex">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
-    </header>
-    <partial name="_LoginPartial" />
     <div class="container">
         <main role="main" class="pb-3">
             <partial name="_Notification" />
@@ -56,7 +54,7 @@
 
     <footer class="border-top footer text-muted bg-dark">
         <div class="container">
-            &copy; 2023 - All right reserved by <a href="https://imranalmunyeem.github.io/imran/ ">Imran Al Munyeem</a> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                &copy; 2023 - All right reserved by <a href="https://www.linkedin.com/in/imran-al-munyeem/ ">Imran Al Munyeem</a> - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -11,11 +11,13 @@ namespace ILibrary_BuyBooksOnline.Data
 
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+
         {
 
         }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ILibraryBooks> ILibraryBook { get; set; }
+        public DbSet<ApplicationUser>ApplicationUsers { get; set; }
         public object ILibraryBooks { get; internal set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
